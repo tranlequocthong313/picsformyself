@@ -1,0 +1,37 @@
+@import '../src/components/sass/colors';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $main-background-color;
+  height: 100vh;
+}
+
+::selection {
+  //Màu của hành động highlight text
+  background-color: $primary-color;
+}
+
+/* Scroll */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $background-color;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $second-color;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $background-color;
+}

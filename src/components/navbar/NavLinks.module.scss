@@ -1,0 +1,45 @@
+@import '../sass/colors';
+@import '../sass/flexCenter';
+
+.navLinks {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: $second-color;
+  margin: 0 10px;
+  padding: 0;
+  line-height: 70px;
+  @include flexCenter(row);
+
+  &:hover {
+    color: $primary-color;
+  }
+
+  span {
+    color: $primary-color;
+    margin-left: 4px;
+  }
+}
+
+.navIcons {
+  margin-left: 4px;
+}
+
+.active {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: $primary-color;
+  margin: 0 10px;
+  line-height: 70px;
+  @include flexCenter(row);
+
+  &:hover {
+    color: $second-color;
+  }
+
+  span {
+    color: $primary-color;
+    margin-left: 4px;
+  }
+}

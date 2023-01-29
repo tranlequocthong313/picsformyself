@@ -1,0 +1,10 @@
+@import '../sass/colors';
+
+.text {
+  color: $primary-color;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}

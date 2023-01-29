@@ -1,0 +1,46 @@
+@import '../sass/colors';
+
+.navbar-light .navbar-toggler {
+  border-color: $primary-color;
+}
+
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-menu-2' width='44' height='44' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23fff' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cline x1='4' y1='6' x2='20' y2='6' /%3E%3Cline x1='4' y1='12' x2='20' y2='12' /%3E%3Cline x1='4' y1='18' x2='20' y2='18' /%3E%3C/svg%3E");
+} //Đổi Icon Hamburger mặc định của Boostrap thành Icon màu trắng
+
+.row {
+  margin-top: 96px;
+}
+
+.btn,
+.btn-primary {
+  background-color: $primary-color;
+  color: #000;
+  border: 1px solid $background-color;
+  font-size: 18px;
+  font-weight: 600;
+  outline: $primary-color;
+
+  &:hover {
+    background-color: $background-color;
+    color: $second-color;
+  }
+
+  &:focus {
+    background-color: $background-color;
+    color: $second-color;
+    border: 1px solid $background-color;
+  }
+
+  &:active {
+    background-color: $background-color;
+    color: $second-color;
+    border: 1px solid $background-color;
+  }
+}
+
+@media (max-width: 1023px) {
+  .container {
+    overflow: hidden;
+  }
+}

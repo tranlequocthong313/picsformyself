@@ -1,0 +1,112 @@
+@import '../sass/colors';
+@import '../sass/flexCenter';
+
+.form {
+  background-color: $background-color;
+  border-radius: 10px;
+  height: 100%;
+  color: $second-color;
+  padding: 30px;
+
+  @include flexCenter(column);
+
+  div {
+    height: 50px;
+    width: 100%;
+  }
+}
+
+.formHeading {
+  text-align: center;
+  margin-bottom: 50px;
+
+  h1 {
+    font-weight: 700;
+    font-size: 40;
+  }
+
+  span {
+    display: block;
+    text-align: center;
+    color: #898787;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 5px;
+  }
+}
+
+.formInput {
+  width: 90%;
+  margin: auto;
+  height: 50px;
+}
+
+.formFooter {
+  margin-top: 20px;
+  @include flexCenter(column);
+
+  p {
+    margin: 10px 0;
+  }
+  span {
+    cursor: pointer;
+    color: $primary-color;
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  span:hover {
+    text-decoration: underline;
+  }
+}
+
+.formShowPass {
+  display: flex;
+  margin-left: 46px !important;
+  width: 100%;
+}
+
+.formButton {
+  width: 90%;
+  padding: 10px 20px;
+
+  &:disabled {
+    background-color: #ccc;
+  }
+}
+
+@media (max-width: 739px) {
+  .formFooter {
+    @include flexCenter(column);
+  }
+  .form {
+    background-color: transparent;
+    width: 400px;
+    padding: 0;
+
+    div {
+      height: 45px;
+    }
+  }
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+  .formFooter {
+    @include flexCenter(column);
+  }
+  .formInput {
+    height: 56px;
+  }
+  .form {
+    background-color: transparent;
+    width: 600px;
+    padding: 0;
+
+    div {
+      height: 56px;
+    }
+  }
+  .formShowPass {
+    margin-left: 60px !important;
+  }
+}

@@ -1,0 +1,77 @@
+@import '../sass/colors';
+@import '../sass/flexCenter';
+
+@mixin setTextOneLine {
+  height: 24px;
+  overflow: hidden;
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card {
+  margin-top: 12px;
+  @include flexCenter(column);
+}
+
+.cardList {
+  background-color: $background-color;
+  margin-right: 0;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.1);
+    z-index: 2;
+    transition: all ease 0.2s;
+  }
+}
+
+.cardItem {
+  color: $second-color;
+  text-align: center;
+  font-weight: 400;
+}
+
+.cardItemTitle {
+  color: $primary-color;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.cardItemAddress {
+  font-style: italic;
+  @include setTextOneLine();
+}
+
+.cardItemDesc {
+  @include setTextOneLine();
+}
+
+.cardItemBtn {
+  width: 100%;
+
+  & a {
+    text-decoration: none;
+    color: $background-color;
+  }
+
+  &:hover,
+  &:active {
+    a {
+      color: $primary-color;
+    }
+  }
+}
+
+.cardImg {
+  cursor: pointer;
+  min-width: 286px;
+  min-height: 195.5px;
+}
+
+@media (max-width: 1023px) {
+  .cardList {
+    &:hover {
+      transform: scale(1);
+    }
+  }
+}

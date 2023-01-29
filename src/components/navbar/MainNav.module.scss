@@ -1,0 +1,47 @@
+@import '../sass/colors';
+
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainNav {
+  background-color: $background-color;
+  padding: 0 !important;
+  min-height: 70.2px;
+}
+
+.navBrand {
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.navLogoLink {
+  text-decoration: none;
+  color: $second-color;
+  &:hover {
+    color: $primary-color;
+    span {
+      color: $second-color;
+    }
+  }
+}
+
+.navLogoLinkBack {
+  color: $background-color;
+  background-color: $primary-color;
+  border-radius: 4px;
+  font-size: 32px;
+  margin-left: 4px;
+}
+
+.hamburgerMenu {
+  display: none;
+}
+
+@media only screen and (max-width: 1023px) {
+  .hamburgerMenu {
+    display: block;
+  }
+}

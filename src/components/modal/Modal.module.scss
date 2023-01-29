@@ -1,0 +1,101 @@
+@import '../sass/colors';
+@import '../sass/flexCenter';
+
+.backDrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  box-shadow: 0 25px 50px rgba($color: $main-background-color, $alpha: 0.2);
+  background: transparent;
+  backdrop-filter: blur(10px);
+  transition: 0.5s;
+  z-index: 3000;
+  @include flexCenter(row);
+  animation: ease 0.5s;
+}
+
+.card {
+  z-index: 3001;
+  background-color: $background-color;
+  text-align: center;
+
+  &:hover .modalImg {
+    display: block;
+  }
+}
+
+.editContainer {
+  max-width: 600px;
+  margin: 0;
+}
+
+//PC
+@media (min-width: 1024px) {
+  .editContainer {
+    height: 100vh;
+  }
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+  .editContainer {
+    height: 100vh;
+  }
+}
+
+@media (max-width: 739px) {
+  .editContainer {
+    height: 120vh;
+  }
+}
+
+//Mobile & Tablet
+@media only screen and (max-width: 1023px) {
+  .card {
+    &.displayNone {
+      display: none;
+    }
+  }
+}
+
+.cardImg {
+  cursor: pointer;
+  width: 100%;
+}
+
+.cardBody {
+  font-weight: 600;
+  color: $second-color;
+}
+
+.cardTitle {
+  color: $primary-color;
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.cardAddress {
+  font-style: italic;
+}
+
+.cardBtn {
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  border-radius: 50%;
+}
+
+.cardBtnText {
+  @include flexCenter(row);
+}
+
+.modalDelete {
+  margin: 0;
+  z-index: 10000;
+}
+
+.cancelButton {
+  background-color: #6c757d;
+  color: $second-color;
+}

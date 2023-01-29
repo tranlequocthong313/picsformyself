@@ -1,0 +1,11 @@
+@import '../sass/colors';
+
+.modalDelete {
+  margin: 0;
+  z-index: 10000;
+}
+
+.cancelButton {
+  background-color: #6c757d;
+  color: $second-color;
+}

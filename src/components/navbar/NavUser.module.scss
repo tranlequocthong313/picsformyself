@@ -1,0 +1,98 @@
+@import '../sass/colors';
+@import '../sass/flexCenter';
+
+.navUserList {
+  line-height: 50px;
+  margin: 0 10px;
+
+  a {
+    padding: 0;
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+
+.navUserItem {
+  width: 100%;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  &:hover,
+  &:active {
+    background-color: $background-color;
+    span {
+      color: $second-color !important;
+    }
+  }
+
+  a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: $background-color;
+    padding: 0;
+  }
+}
+
+.navUserIcon:hover {
+  fill: $second-color;
+}
+
+.authButton {
+  @include flexCenter(row);
+  color: $background-color !important;
+}
+
+.navLinks {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: $second-color;
+  margin: 10px;
+  padding: 0;
+  &:hover {
+    color: $primary-color;
+
+    .authButtonIcon {
+      fill: $primary-color;
+    }
+  }
+
+  span {
+    color: $second-color;
+  }
+
+  .authButtonIcon {
+    margin-left: 4px;
+    fill: $second-color;
+  }
+}
+
+.active {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: $primary-color;
+  margin: 10px;
+  fill: $primary-color;
+
+  &:hover {
+    color: $second-color;
+    fill: $second-color;
+  }
+
+  span {
+    color: $primary-color;
+  }
+
+  .authButtonIcon {
+    margin-left: 4px;
+  }
+}
+
+.authButtonIconLogout {
+  @include flexCenter(row);
+  margin-left: 4px;
+}

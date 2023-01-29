@@ -1,0 +1,49 @@
+@import '../sass/colors';
+
+.authLogo {
+  font-size: 40px;
+  font-weight: 700;
+  color: $second-color;
+  text-decoration: none;
+}
+
+.authLogoBack {
+  color: $background-color;
+  background-color: $primary-color;
+  border-radius: 4px;
+}
+
+.authSlogan {
+  width: 80%;
+  font-size: 54px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $second-color;
+  margin-top: 30px;
+}
+
+.profileIcons {
+  margin: 20px;
+  cursor: pointer;
+
+  &:hover {
+    fill: $primary-color;
+  }
+}
+
+@media (max-width: 1023px) {
+  .authSloganSection {
+    padding: 0;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .authLogo,
+  .authSlogan {
+    display: none;
+    font-size: 45px;
+  }
+
+  .profileIconSection {
+    display: none;
+  }
+}

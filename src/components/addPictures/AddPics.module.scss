@@ -1,0 +1,58 @@
+@import '../sass/colors';
+@import '../sass/flexCenter';
+
+.formLabel {
+  color: $primary-color;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.formControl {
+  background-color: $background-color;
+  color: $second-color;
+  border: 1px solid $second-color;
+}
+
+.formDrop {
+  margin: 20px 0;
+}
+
+.formDropMenu {
+  width: 200px;
+  background-color: $background-color;
+}
+
+.formDropMenuItem {
+  font-size: 18px;
+  line-height: 2;
+  font-weight: 600;
+  color: $second-color;
+  @include flexCenter(row);
+
+  &:active {
+    background-color: $second-color;
+    color: $primary-color;
+  }
+
+  &:hover {
+    background-color: $primary-color;
+    color: $second-color;
+  }
+}
+
+.previewPic {
+  width: 300px;
+  margin: 8px 0 0 40px;
+  border-radius: 4px;
+}
+
+.formBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 12px 0 20px 0;
+
+  button {
+    width: 500px;
+  }
+}
